@@ -13,7 +13,7 @@ class Program
 
         foreach (var item in listaCNPJ)
         {
-            Console.WriteLine($"O CNPJ {item} é {(Validacao.IsCnpjValido(item) ? "válido" : "inválido")}");
+            Console.WriteLine($"O CNPJ {item} é {(Validacao.IsCnpjValido(item) ? "Válido" : "INVÁLIDO")}");
         }            
 
         Console.ReadKey();
