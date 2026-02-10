@@ -1,5 +1,5 @@
 
-## :pill: Mudanças
+## Mudanças
 
 Com o objetivo de se obter o mínimo de impacto, foi mantido o número atual de posições, que é 14. As oito primeiras posições que representam a raiz agora aceitarão, além de números, letras. O mesmo ocorre para as quatro próximas posições que identificam a ordem do estabelecimento (se é matriz ou filial). Já as duas últimas posições, que representam os dígitos verificadores, permanecerão apenas como numéricos. Em resumo, somente os dígitos verificadores permanecerão como números. Uma forma de manter o mesmo esquema de validação do formato numérico utilizado até então.
 
@@ -17,7 +17,7 @@ Observe que, para calcular o primeiro dígito, pegamos as 12 primeiras posiçõe
 
 <br />
 
-## :zap: Validação do novo CNPJ em C#
+## Validação do novo CNPJ em C#
 
 Conforme informado na *Nota Técnica conjunta COCAD/SUARA/RFB nº 49 de 14 de maio de 2024*, o cálculo para a validação do CNPJ continua sendo pelo módulo 11. Porém, para que fossem incluídas as letras no número de inscrição do CNPJ, foi necessário alterar a maneira como se calcula o dígito verificador. A partir de agora, é necessário substituir os valores numéricos e alfanuméricos pelo valor decimal correspondente na tabela de código ASCII. De posse de tal valor, é necessário subtrair dele o valor 48. Por exemplo, na tabela abaixo temos a letra "E", cujo valor decimal é 69, logo 69 - 48 = 21, então E = 21 será o valor utilizado nas multiplicações.
 
@@ -45,13 +45,13 @@ Por fim, testamos a nossa classe de validação com alguns exemplos:
 
 <br />
 
-## :floppy_disk: Instalação
+## Instalação
 
 `git clone https://github.com/celso-rodrigues-source/validacao-novo-cnpj`
 
 <br />
 
-## :mortar_board: Referências
+## Referências
 
 *Nota Técnica Conjunta COCAD/SUARA/RFB n° 49/2024:* <https://www.seprorgs.org.br/admin/assets/upload/noticias_anexo/6039179747.pdf>
 
@@ -61,6 +61,4 @@ Por fim, testamos a nossa classe de validação com alguns exemplos:
 
 *Como validar o novo formato do CNPJ do Brasil:* <https://welyab.dev/2024/06/29/como-validar-o-novo-formato-do-cnpj-do-brasil>
 
----
-##### Autor: <http://www.emanuelsampaio.com.br>
-# validacao-novo-cnpj
+
