@@ -9,7 +9,7 @@ class Program
         listaCNPJ.Add("13.638.767/0001-92");
         listaCNPJ.Add("33.EMA.SAM/E007-81");
         listaCNPJ.Add("04.KA2.B01/A001-49");
-        listaCNPJ.Add("a1.b2c.3d40/1a2b-41");
+        listaCNPJ.Add("a1.b2c.3d40/1a2b-A1");
 
         foreach (var item in listaCNPJ)
         {
