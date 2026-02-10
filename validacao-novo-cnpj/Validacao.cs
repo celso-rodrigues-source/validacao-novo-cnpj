@@ -1,4 +1,6 @@
-﻿namespace validacao_novo_cnpj
+﻿using System.Text.RegularExpressions;
+
+namespace validacao_novo_cnpj
 {
     /// <summary>
     /// Classe utilizada para validações
@@ -10,12 +12,10 @@
         /// </summary>
         /// <param name="cnpj"></param>
         /// <returns></returns>
-        public static bool IsNovoCnpj(string cnpj)
+        public static bool IsCnpjValido(string cnpj)
         {
             //Deixa somente as posições do CNPJ sem barras, pontos, etc
-            cnpj =  !string.IsNullOrEmpty(cnpj) 
-                    ? cnpj.Trim().ToUpper().Replace(".", "").Replace("-", "").Replace("/", "").Replace("\\", "") 
-                    : "";
+            cnpj = Regex.Replace(cnpj, @"[^a-zA-Z0-9]", "").ToUpper();
 
             if (cnpj.Length != 14)
             {
